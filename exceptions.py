@@ -4,7 +4,7 @@ class ReversiError(Exception):
 
 
 class NoneColorError(ReversiError):
-    def __str__(self) -> None:
+    def __str__(self) -> str:
         return 'cannot place disk of color NONE'
 
 
@@ -16,5 +16,5 @@ class InplaceableError(ReversiError):
         self.column = column
         self.color = color
 
-    def __str__(self) -> None:
+    def __str__(self) -> str:
         return f'cannot place disk of color #{self.color} on ({self.row}, {self.column})'

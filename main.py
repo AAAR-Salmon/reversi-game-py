@@ -5,7 +5,7 @@ from color import Color
 from reversi import Reversi
 
 
-def main():
+def main() -> None:
     reversi = Reversi(8, 8)
     player_turn = random.choice([Color.DARK, Color.LIGHT])
     while reversi.turn != Color.NONE:
