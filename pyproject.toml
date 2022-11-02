@@ -6,7 +6,6 @@ authors = ["AAAR-Salmon <aaar-salmon@example.com>"]
 license = "Apache-2.0"
 readme = "README.md"
 repository = "https://github.com/AAAR-Salmon/reversi-game-py"
-packages = [{include = "src/reversi_game"}]
 
 [tool.poetry.dependencies]
 python = "^3.10"
