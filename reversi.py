@@ -1,8 +1,8 @@
 import numpy as np
 import itertools as it
 from typing import List, Tuple
-from color import Color
-from exceptions import InplaceableError, NoneColorError
+from .color import Color
+from .exceptions import InplaceableError, NoneColorError
 
 
 class Reversi:
