@@ -38,6 +38,7 @@ class Reversi:
                 if self.board[_target_row, _target_column] == color:  # 見つかった
                     result.extend([(row+delta_row*i, column+delta_column*i)
                                   for i in range(1, distance)])
+                    break
         return result
 
     def get_placeable_coords(self, color: Color) -> List[Tuple[int, int]]:
