@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "reversi-game"
-version = "0.1.0"
+version = "0.1.1"
 description = "Python implementation of scaleable reversi game"
 authors = ["AAAR-Salmon <aaar-salmon@example.com>"]
 license = "Apache-2.0"
