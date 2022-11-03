@@ -45,6 +45,8 @@ class Reversi:
         return [(row, column) for row in range(self.height) for column in range(self.width) if self.is_placeable(row, column, color)]
 
     def is_placeable(self, row: int, column: int, color: Color) -> bool:
+        if self.board[row, column] != Color.NONE:
+            return False
         _indices = self.__calc_indices_to_be_flipped(row, column, color)
         return len(_indices) != 0
 
@@ -57,8 +59,10 @@ class Reversi:
             self.board[index] = color
 
     def forward_turn(self) -> Color:
-        can_opposite_player_place = len(self.get_placeable_coords(self.turn.next())) != 0
-        can_current_player_place = len(self.get_placeable_coords(self.turn)) != 0
+        can_opposite_player_place = len(
+            self.get_placeable_coords(self.turn.next())) != 0
+        can_current_player_place = len(
+            self.get_placeable_coords(self.turn)) != 0
         if not can_opposite_player_place and not can_current_player_place:
             return Color.NONE
         if not can_opposite_player_place:
